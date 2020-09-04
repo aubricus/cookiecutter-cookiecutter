@@ -1,0 +1,27 @@
+{
+  "full_name": "Jane Doe",
+  "email": "janedoe@example.com",
+  "github_username": "janedoe",
+  "project_name": "My Project",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').strip() }}",
+  "project_summary": "",
+  "project_background": "",
+  "project_boilerplate_type": "",
+  "project_license": [
+    "MIT",
+    "LGPL-3.0",
+    "MPL-2.0",
+    "AGPL-3.0",
+    "Unlicense",
+    "Apache-2.0",
+    "GPL-3.0"
+  ],
+  "project_version": "0.1.0",
+  "project_uses_semantic_versioning": true,
+  "project_accepts_issues_prs": true,
+  "template_python_version": "3.6.9",
+  "template_version": "0.1.0",
+
+  "_inner_dir": "{{cookiecutter.project_slug}}",
+  "_copy_without_render": ["*.donotrender"]
+}

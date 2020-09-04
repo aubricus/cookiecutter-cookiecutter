@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "cookiecutter-python-package"
+version = "0.1.0"
+description = "A CookieCutter Python 3 package template"
+authors = ["Aubrey Taylor"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+cookiecutter = "^1.7.2"
+black = "^20.8b1"
+click = "^7.1.2"
+klak = "^0.4.3"
+python-dotenv = "^0.14.0"
+pytest-cookies = "^0.5.1"
+pdbpp = "^0.10.2"
+mypy = "^0.782"
+pydocstyle = "^5.1.1"
+
+[tool.black]
+exclude = '''
+(
+  /(
+      \.eggs
+    | \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+)
+'''
+
+[build-system]
+requires = ["poetry-core>=1.0.0a5"]
+build-backend = "poetry.core.masonry.api"
