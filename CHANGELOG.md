@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.1.2
+
+- Fixed bug where generated **cookiecutter.json**, **project_slug** was getting set to what was entered during initial generation
+
 ## 0.1.1
 
 - Fixed bug with GitHub Issue & Pull Request templates
