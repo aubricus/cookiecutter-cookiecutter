@@ -23,6 +23,9 @@ def get_license():
     url = f"{base_url}/{project_license}"
     headers = {"Accept": "application/vnd.github.v3+json"}
 
+    if project_license == "No License".lower():
+        return
+
     try:
         req = Request(url, headers=headers)
     except urllib.error.HTTPError as e:
