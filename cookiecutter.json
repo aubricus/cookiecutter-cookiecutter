@@ -17,6 +17,11 @@
     "GPL-3.0",
     "No License"
   ],
+  "project_code_of_conduct": [
+    "Contributor Covenant",
+    "Citizen Code Of Conduct",
+    "No Code of Conduct"
+  ],
   "project_version": "0.1.0",
   "project_uses_semantic_versioning": true,
   "project_accepts_issues_prs": true,

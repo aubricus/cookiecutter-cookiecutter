@@ -29,21 +29,19 @@ $ cookiecutter gh:{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}
 
 ## Features
 
-This template supports the following:
-
-- _TODO: Update_
-
 This template generates a {{ cookiecutter.project_boilerplate_type }} boilerplate with the following features:
 
 - _TODO: Update_
 
 ## Support
 
+- Last tested under {{ cookiecutter.template_python_version }} (local manual & automated testing)
 - _TODO: Update_
 
 ## Maintainers
 
-- [{{ cookiecutter.github_username }}](https://github.com/{{ cookiecutter.github_username }})
+- {% if cookiecutter.github_username %} [{{ cookiecutter.github_username }}](https://github.com/{{ cookiecutter.github_username }}){% endif %}
+- _TODO: Update_
 
 ## Attribution
 
