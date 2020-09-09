@@ -9,7 +9,7 @@
 
 ### Dependencies
 
-- Python {{ cookiecutter.template_python_version }} ([pyenv] recommended)
+- Python {{ cookiecutter.project_python_version }} ([pyenv] recommended)
 - [Poetry]
 
 ### Installation

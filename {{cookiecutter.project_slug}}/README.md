@@ -12,7 +12,7 @@
 
 ### Dependencies
 
-- {{ cookiecutter.template_python_version }} ([pyenv] recommended)
+- {{ cookiecutter.project_python_version }} ([pyenv] recommended)
 - [CookieCutter]
 
 ### Installation
@@ -29,7 +29,7 @@ $ cookiecutter gh:{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}
 
 ## Features
 
-This [CookieCutter] generates a {{ cookiecutter.project_boilerplate_type}} boilerplate.
+This [CookieCutter] generates a {{ cookiecutter.project_type}} boilerplate.
 
 **The generated project, by default...**
 
@@ -40,7 +40,7 @@ This [CookieCutter] generates a {{ cookiecutter.project_boilerplate_type}} boile
 
 ## Support
 
-- Last tested under {{ cookiecutter.template_python_version }} (local manual & automated testing)
+- Last tested under {{ cookiecutter.project_python_version }} (local manual & automated testing)
 - _TODO: Update_
 
 ## Maintainers

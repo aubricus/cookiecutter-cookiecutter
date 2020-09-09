@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "cookiecutter-python-package"
-version = "{{ cookiecutter.template_version }}"
-description = "{{ cookiecutter.project_summary }}"
+version = "{{ cookiecutter.project_version }}"
+{% if cookiecutter.project_summary %}description = "{{ cookiecutter.project_summary }}"{% endif %}
 authors = ["{{cookiecutter.full_name}}"]
 license = "{{ cookiecutter.project_license }}"
 
 [tool.poetry.dependencies]
-python = "{{ cookiecutter.template_python_version }}"
+python = "{{ cookiecutter.project_python_version }}"
 
 [tool.poetry.dev-dependencies]
 cookiecutter = "^1.7.2"
