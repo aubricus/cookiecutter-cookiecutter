@@ -1,6 +1,6 @@
 # {{ cookiecutter.project_name }}
 
-[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme) [![code style black](https://img.shields.io/badge/code%20style-black-%23000000)](https://github.com/psf/black) [![License {{ cookiecutter.project_license }}](https://img.shields.io/github/license/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }})](./LICENSE)
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme) [![code style black](https://img.shields.io/badge/code%20style-black-%23000000)](https://github.com/psf/black) {% if cookiecutter.project_license != "No License" %}[![License {{ cookiecutter.project_license }}](https://img.shields.io/github/license/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }})](./LICENSE){% endif %}
 
 {% if cookiecutter.project_summary %}_{{ cookiecutter.project_summary }}_{% endif %}
 
@@ -61,7 +61,7 @@ _Small note: If editing the [README.md], please conform to the [standard-readme 
 
 ## License
 
-[{{ cookiecutter.project_license }}](./LICENSE) &copy; {{ cookiecutter.full_name }} 2020
+{% if cookiecutter.project_license != "No License" %}[{{ cookiecutter.project_license }}](./LICENSE) &copy; {{ cookiecutter.full_name }} 2020{% else %}{{ cookiecutter.project_license }}{% endif%}
 
 <!-- Links -->
 
