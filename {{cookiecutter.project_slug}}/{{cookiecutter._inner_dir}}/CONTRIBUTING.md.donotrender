@@ -9,13 +9,12 @@
 
 ### Dependencies
 
-- Python 3.6 ([pyenv] recommended)
-- [Poetry]
+- _TODO: Update_
 
 ### Installation
 
 ```bash
-$ poetry install
+# TODO: Update
 ```
 
 ## Usage
@@ -47,8 +46,7 @@ You must configure your editor to:
 _Note: Run tests before creating a pull-request_
 
 ```bash
-$ source .venv/bin/activate
-$ pytest
+# TODO: Update
 ```
 
 <!-- Links -->

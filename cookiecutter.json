@@ -6,7 +6,11 @@
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').strip() }}",
   "project_summary": "",
   "project_background": "",
-  "project_boilerplate_type": "",
+  "project_python_version": "3.6.9",
+  "project_type": "",
+  "project_uses_semantic_versioning": true,
+  "project_version": "0.1.0",
+  "project_accepts_issues_prs": true,
   "project_license": [
     "MIT",
     "LGPL-3.0",
@@ -22,11 +26,6 @@
     "Citizen Code Of Conduct",
     "No Code of Conduct"
   ],
-  "project_version": "0.1.0",
-  "project_uses_semantic_versioning": true,
-  "project_accepts_issues_prs": true,
-  "template_python_version": "3.6.9",
-  "template_version": "0.1.0",
   "_inner_dir": "{{cookiecutter.project_slug}}",
   "_copy_without_render": ["*.donotrender"]
 }

@@ -12,30 +12,28 @@
 
 ### Dependencies
 
-- {{ cookiecutter.template_python_version }} ([pyenv] recommended)
-- [CookieCutter]
+- _TODO: Update_
 
 ### Installation
 
 ```bash
-$ pip install -U cookiecutter
+# TODO: Update
 ```
 
 ## Usage
 
 ```bash
-$ cookiecutter gh:{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}
+# TODO: Update
 ```
 
 ## Features
 
-This template generates a {{ cookiecutter.project_boilerplate_type }} boilerplate with the following features:
+This template generates a {{ cookiecutter.project_type }} boilerplate with the following features:
 
 - _TODO: Update_
 
 ## Support
 
-- Last tested under {{ cookiecutter.template_python_version }} (local manual & automated testing)
 - _TODO: Update_
 
 ## Maintainers
