@@ -22,6 +22,7 @@
   "project_accepts_issues_prs": true,
   "template_python_version": "3.6.9",
   "template_version": "0.1.0",
-  "_inner_dir": "{{cookiecutter.project_slug}}",
-  "_copy_without_render": ["*.donotrender"]
+  "_copy_without_render": [
+    "*.donotrender"
+  ]
 }
