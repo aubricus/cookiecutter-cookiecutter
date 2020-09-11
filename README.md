@@ -29,9 +29,9 @@ $ cookiecutter gh:aubricus/cookiecutter-cookiecutter
 
 ## Features
 
-This [CookieCutter] template generates [CookieCutter] templates which can then output your project boilerplate:
+This [CookieCutter] template generates [CookieCutter] templates which can then output a project boilerplate:
 
-**The generated [CookieCutter] template...**
+**The generted [CookieCutter] template...**
 
 - Outputs a sensible README.md using the [Standard README] format.
 - Outputs lightweight **CHANGELOG.md**, **CONTRIBUTING.md**
@@ -43,7 +43,7 @@ This [CookieCutter] template generates [CookieCutter] templates which can then o
 - Supports [pytest] & [pytest-cookies] for testing
 - Supports [EditorConfig], [Black], & [pydocstyle] for formatting & linting
 
-**The generated project, by default...**
+**The project boilerplate...**
 
 - Outputs a sensible README.md using the [Standard README] format.
 - Outputs lightweight **CHANGELOG.md**, **CONTRIBUTING.md**
