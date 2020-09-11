@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.1.5
+
+- Added simple GitHub workflow to run `pytest`
+
 ## 0.1.4
 
 - Simplified **cookiecutter.json** options
