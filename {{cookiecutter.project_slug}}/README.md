@@ -31,7 +31,11 @@ $ cookiecutter gh:{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}
 
 This [CookieCutter] generates a {{ cookiecutter.project_type}} boilerplate.
 
-**The generated project, by default...**
+**The template itself...**
+
+- Supports a `.donotrender` extension to declaritively exempt files from [CookieCutter]
+
+**The generated {{ cookiecutter.project_type }}...**
 
 - Outputs a sensible README.md using the [Standard README] format.
 - Outputs lightweight **CHANGELOG.md**, **CONTRIBUTING.md**
@@ -40,7 +44,6 @@ This [CookieCutter] generates a {{ cookiecutter.project_type}} boilerplate.
 
 ## Support
 
-- Last tested under {{ cookiecutter.project_python_version }} (local manual & automated testing)
 - _TODO: Update_
 
 ## Maintainers
