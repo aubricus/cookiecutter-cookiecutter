@@ -52,8 +52,10 @@ This [CookieCutter] template generates [CookieCutter] templates which can then o
 
 ## Support
 
-- Last tested under Python 3.6.9 on MacOS 10.15.5 (local manual & automated testing)
-- Linux & Windows (not tested)
+- **Python** 3.6
+- **MacOS** 10.15.5 (manual testing, `pytest`)
+- **Linux** Ubuntu, Latest (via [GitHub Actions])
+- **Windows** Not Tested 😟
 
 ## Maintainers
 
@@ -100,3 +102,4 @@ _Small note: If editing the [README.md], please conform to the [standard-readme 
 [pydocstyle]: https://www.pydocstyle.org/en/stable/
 [editorconfig]: https://editorconfig.org/
 [pytest-cookies]: https://pytest-cookies.readthedocs.io/en/latest/
+[github actions]: https://docs.github.com/en/actions
