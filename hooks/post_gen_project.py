@@ -163,47 +163,8 @@ def remove_donotrender_ext():
         p.replace(p.with_suffix(""))
 
 
-# [Remove]
-# NOTE: The above directive is used to remove this section during copy_hook
-def copy_hook():
-    """Copy this repo's post_gen_project hook to the template."""
-    src = Path(__file__)
-    dest = Path.cwd().joinpath("hooks/post_gen_project.py")
-
-    print("Copying hooks...")
-
-    try:
-        os.makedirs(str(dest.parent))
-        shutil.copy(str(src), str(dest))
-    except FileExistsError:
-        shutil.copy(str(src), str(dest))
-
-    _do_post_copy_remove(dest)
-
-
-def _do_post_copy_remove(file_path):
-    remove_token = "# [Remove]"
-    remove_closing_token = "# [End Remove]"
-    skip_line = False
-    with fileinput.FileInput(str(file_path), inplace=True) as f:
-        for line in f:
-            line = line.strip("\n")
-            if line.strip() == remove_token:
-                skip_line = True
-
-            if not skip_line:
-                print(line)
-
-            if line.strip() == remove_closing_token:
-                skip_line = False
-
-
-# [End Remove]
 def run():
     """Run post gen hook functions."""
-    # [Remove]
-    copy_hook()
-    # [End Remove]
     remove_donotrender_ext()
     get_license()
     get_code_of_conduct()
