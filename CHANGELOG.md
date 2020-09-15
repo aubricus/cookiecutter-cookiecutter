@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.1.6
+
+- Removed `copy_hook` action in **post_gen_project.py** in favor of maintaining two copies (this was just more practical, less magical). This also fixed a bug where variables entered during generation ended up in generated **post_gen_project.py**.
+- Simplified **test_bake_project.py**
+- Added dynamically generated boilerplate **pyproject.toml**
+- Fixed a bug in **workflows/ci.yml** that was installing an incorrect version of Poetry
+
 ## 0.1.5
 
 - Added simple GitHub workflow to run `pytest`
