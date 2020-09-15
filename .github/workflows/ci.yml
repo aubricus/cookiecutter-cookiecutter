@@ -1,4 +1,4 @@
-name: ci
+name: pytest
 on:
   push:
     branches: [master]
@@ -9,13 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run pytest
+      - name: Setup Python
         uses: actions/setup-python@v2
         with:
           python-version: "3.6.9"
       - run: |
           curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
           source $HOME/.poetry/env
+          poetry self update --preview 1.1.0b2
           poetry install
           source .venv/bin/activate
-          pytest
+          pytest -s

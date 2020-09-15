@@ -34,5 +34,6 @@ def test_bake(cookies):
     assert baked.exception is None
     assert project_path.joinpath("LICENSE").is_file()
     assert project_path.joinpath("CODE_OF_CONDUCT.md").is_file()
+    assert project_path.joinpath("pyproject.toml").is_file()
 
     subprocess.run(["black", "--check"], cwd=project_path, check=True)
