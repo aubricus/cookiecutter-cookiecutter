@@ -9,6 +9,7 @@ import json
 import urllib
 import shutil
 import fileinput
+import subprocess
 from urllib import request
 from urllib.request import Request
 from datetime import date
@@ -18,7 +19,11 @@ from pathlib import Path
 COOKIECUTTER_SETTINGS = {
     "full_name": "{{ cookiecutter.full_name }}",
     "email": "{{ cookiecutter.email }}",
+    "github_username": "{{ cookiecutter.github_username }}",
+    "project_slug": "{{ cookiecutter.project_slug }}",
+    "project_summary": "{{ cookiecutter.project_summary }}",
     "project_license": "{{ cookiecutter.project_license }}",
+    "project_python_version": "{{ cookiecutter.project_python_version }}",
     "project_code_of_conduct": "{{ cookiecutter.project_code_of_conduct }}",
 }
 
@@ -163,6 +168,39 @@ def remove_donotrender_ext():
         p.replace(p.with_suffix(""))
 
 
+def poetry_init():
+    """Initialize poetry."""
+    print("Creating pyproject.toml...")
+
+    if not shutil.which("poetry") is not None:
+        print("poetry is not installed, but required! Skipping poetry init...")
+        return
+
+    name = COOKIECUTTER_SETTINGS["project_slug"]
+    description = COOKIECUTTER_SETTINGS["project_summary"]
+    author = COOKIECUTTER_SETTINGS["full_name"]
+    license = COOKIECUTTER_SETTINGS["project_license"]
+    python_version = COOKIECUTTER_SETTINGS["project_python_version"]
+    project_slug = COOKIECUTTER_SETTINGS["project_slug"]
+    github_username = COOKIECUTTER_SETTINGS["github_username"]
+
+    # NOTE: Installs default dev dependencies only.
+    cmd = [
+        *("poetry", "init", "--no-interaction", "--quiet"),
+        *("--name", name),
+        *("--description", description),
+        *("--author", author),
+        *("--license", license),
+        *("--python", python_version),
+        *("--dev-dependency", "cookiecutter"),
+        *("--dev-dependency", "black"),
+        *("--dev-dependency", "pydocstyle"),
+        *("--dev-dependency", "pytest-cookies"),
+        *("--dev-dependency", "pdbpp"),
+    ]
+    subprocess.run(cmd, check=True)
+
+
 # [Remove]
 # NOTE: The above directive is used to remove this section during copy_hook
 def copy_hook():
@@ -207,6 +245,7 @@ def run():
     remove_donotrender_ext()
     get_license()
     get_code_of_conduct()
+    poetry_init()
 
 
 # NOTE: Do not delete this or the hook will not run.
