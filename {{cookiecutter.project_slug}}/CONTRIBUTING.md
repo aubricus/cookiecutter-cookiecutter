@@ -10,20 +10,23 @@
 ### Dependencies
 
 - Python {{ cookiecutter.project_python_version }} ([pyenv] recommended)
+- [Virtualenv]
 - [Poetry]
 
 ### Installation
 
 ```bash
 $ poetry install
+$ source .venv/bin/activate
 ```
 
 ## Usage
 
-### Editor Config
+### Editor Settings
 
 You must configure your editor to:
 
+- Select `python` from local .venv folder
 - Respect an [EditorConfig]
 - Enable formating Python with [Black] (on save recommended)
 - Enable linting with [pydocstyle] (on save recommended)
@@ -33,11 +36,14 @@ You must configure your editor to:
 
 ```json
 {
+  "python.pythonPath": ".venv/bin/python",
   "python.formatting.provider": "black",
   "editor.formatOnSave": true,
   "python.linting.pydocstyleEnabled": true
 }
 ```
+
+Note: [EditorConfig] is supported by a [VSCode EditorConfig Extension]
 
 </p>
 </details>
@@ -47,7 +53,6 @@ You must configure your editor to:
 _Note: Run tests before creating a pull-request_
 
 ```bash
-$ source .venv/bin/activate
 $ pytest
 ```
 
@@ -61,3 +66,5 @@ $ pytest
 [pyenv]: https://github.com/pyenv/pyenv
 [pydocstyle]: https://pypi.org/project/pydocstyle/
 [editorconfig]: https://editorconfig.org/
+[virtualenv]: https://virtualenv.pypa.io/en/latest/
+[vscode editorconfig extension]: https://github.com/editorconfig/editorconfig-vscode
