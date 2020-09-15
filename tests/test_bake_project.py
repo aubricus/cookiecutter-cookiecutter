@@ -2,6 +2,7 @@ from contextlib import contextmanager
 
 import os
 import subprocess
+from pathlib import Path
 
 
 @contextmanager
@@ -20,14 +21,18 @@ def inside_dir(dirpath):
 
 def test_bake(cookies):
     """Test template bake."""
-    extra_context = {}
+    extra_context = {
+        "project_summary": "A summary",
+        "project_background": "A background",
+        "project_license": "MIT",
+        "project_code_of_conduct": "Contributor Covenant",
+    }
     baked = cookies.bake(extra_context=extra_context)
+    project_path = Path(baked.project)
+
     assert baked.exit_code == 0
     assert baked.exception is None
+    assert project_path.joinpath("LICENSE").is_file()
+    assert project_path.joinpath("CODE_OF_CONDUCT.md").is_file()
 
-
-def test_run_black(cookies):
-    """Test template files are formatted."""
-    result = cookies.bake(extra_context={"project_slug": "black_compat"})
-    with inside_dir(str(result.project)):
-        call_result = subprocess.check_call(["black"])
+    subprocess.run(["black", "--check"], cwd=project_path, check=True)
