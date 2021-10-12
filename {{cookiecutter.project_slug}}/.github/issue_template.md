@@ -7,5 +7,5 @@ Bug:
 - Expected Behavior
 - Observed Behaivor
 - Reproduction Steps
-- System Info (OS, Python Version, CookieCutter-CookieCutter Version)
+- System Info (OS, Python Version, {{ cookiecutter.project_slug }} Version)
 -->
