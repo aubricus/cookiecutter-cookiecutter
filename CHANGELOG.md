@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.1.7
+
+- Fixed a hardcoded package in the issue template
+- Fixed a typo in the issue template
+- Listed poetry as a dependency in README.md
+- Updated ci.yml to work with multiple versions of python
+- Updated project slug format to be compatible
+
 ## 0.1.6
 
 - Removed `copy_hook` action in **post_gen_project.py** in favor of maintaining two copies (this was just more practical, less magical). This also fixed a bug where variables entered during generation ended up in generated **post_gen_project.py**.
