@@ -13,6 +13,7 @@ This is inspired by [eviweb/cookiecutter-template] ([v0.1.1](https://github.com/
 ### Dependencies
 
 - Python 3.6 ([pyenv] recommended)
+- [Poetry]
 - [CookieCutter]
 
 ### Installation

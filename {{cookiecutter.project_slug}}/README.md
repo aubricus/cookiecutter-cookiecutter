@@ -13,6 +13,7 @@
 ### Dependencies
 
 - {{ cookiecutter.project_python_version }} ([pyenv] recommended)
+- [Poetry]
 - [CookieCutter]
 
 ### Installation
