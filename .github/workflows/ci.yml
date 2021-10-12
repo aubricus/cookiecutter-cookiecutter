@@ -1,22 +1,31 @@
-name: pytest
+name: CI
+
 on:
   push:
-    branches: [master]
+    branches: [ master ]
   pull_request:
-    branches: [master]
+    branches: [ master ]
+
 jobs:
-  pytest:
+  build:
+
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: [3.6, 3.7, 3.8]
     steps:
-      - uses: actions/checkout@v2
-      - name: Setup Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.6.9"
-      - run: |
-          curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
-          source $HOME/.poetry/env
-          poetry self update --preview 1.1.0b2
-          poetry install
-          source .venv/bin/activate
-          pytest -s
+    - uses: actions/checkout@v2
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python }}
+    - name: Install Dependencies
+      run: |
+        curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+        source $HOME/.poetry/env
+        poetry self update --preview 1.1.0b2
+        poetry update -v
+    - name: Run PyTest
+      run: |
+        source $HOME/.poetry/env
+        poetry run pytest
