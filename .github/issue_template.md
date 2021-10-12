@@ -5,7 +5,7 @@ Provide the following additional information per type:
 
 Bug:
 - Expected Behavior
-- Observed Behaivor
+- Observed Behavior
 - Reproduction Steps
 - System Info (OS, Python Version, CookieCutter-CookieCutter Version)
 -->
