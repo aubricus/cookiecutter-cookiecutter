@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+### 0.1.8
+
+- Removed testing / support for Python 3.6
+- Added testing / support for Python 3.9
+- Fixed minor errors in pyproject.toml
+- Updated dev dependencies
+
 ## 0.1.7
 
 - Fixed a hardcoded package in the issue template
