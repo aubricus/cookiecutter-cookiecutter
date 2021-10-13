@@ -9,7 +9,7 @@ Issues & pull-requests accepted.
 
 ### Dependencies
 
-- Python 3.6 ([pyenv] recommended)
+- Python 3.7 ([pyenv] recommended)
 - [Virtualenv]
 - [Poetry]
 

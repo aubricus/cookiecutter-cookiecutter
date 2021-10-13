@@ -12,7 +12,7 @@ This is inspired by [eviweb/cookiecutter-template] ([v0.1.1](https://github.com/
 
 ### Dependencies
 
-- Python 3.6 ([pyenv] recommended)
+- Python 3.7 ([pyenv] recommended)
 - [Poetry]
 - [CookieCutter]
 
@@ -46,7 +46,7 @@ $ cookiecutter gh:aubricus/cookiecutter-cookiecutter
 
 ## Support
 
-- **Python** 3.6
+- **Python** 3.7
 - **MacOS** 10.15.5 (manual testing, `pytest`)
 - **Linux** Ubuntu, Latest (via [GitHub Actions])
 - **Windows** Not Tested 😟
