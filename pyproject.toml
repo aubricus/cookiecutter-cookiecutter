@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "cookiecutter-python-package"
-version = "0.1.0"
-description = "A CookieCutter Python 3 package template"
+name = "cookiecutter-cookiecutter"
+version = "0.1.8"
+description = "A CookieCutter CookieCutter Template"
 authors = ["Aubrey Taylor"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.7"
 
 [tool.poetry.dev-dependencies]
 cookiecutter = "^1.7.2"
